@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martina</title>
+    <link rel="stylesheet" href="estilos/floral.css">
+  
+<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="portada">
+        <img src="./Img/logo.png" alt="Logotipo de la quinceañera" class="logo">
+        <!-- Vectores florales superiores -->
+        <img src="./Img/floral-top-left.png" alt="Vector floral superior izquierdo" class="floral floral-top-left">
+        <img src="./Img/floral-top-rigth.png" alt="Vector floral superior derecho" class="floral floral-top-right">
+        <!-- Nuevos vectores florales inferiores -->
+        <img src="./Img/floral-bottom-left.png" alt="Vector floral inferior izquierdo" class="floral floral-bottom-left">
+        <img src="./Img/floral-bottom-rigth.png" alt="Vector floral inferior derecho" class="floral floral-bottom-right">
+         <!-- Flecha hacia abajo -->
+    <img src="./Img/arrow-down.png" alt="Flecha hacia abajo" class="arrow-down">
+    </div>
+    <!--SECCION cieta regresiva-->
+    <section class="seccion-fecha">
+        <div class="fecha-contenedor">
+          
+            <h1 class="fecha-evento">Cada vez falta menos para el gran día</h1>
+            <p class="fecha-evento-2">12 de Octubre, 2024</p>
+            <h1>Faltan:</h1>
+            <div class="contador">
+                <div class="contador-item">
+                    <span id="dias"></span>
+                    <p>Días</p>
+                </div>
+                <div class="contador-item">
+                    <span id="horas"></span>
+                    <p>Horas</p>
+                </div>
+                <div class="contador-item">
+                    <span id="minutos"></span>
+                    <p>Minutos</p>
+                </div>
+                <div class="contador-item">
+                    <span id="segundos"></span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="seccion-ubicacion">
+        <div class="ubicacion-contenedor">
+            <img src="./Img/location-icon.svg" alt="Ícono de ubicación" class="icono">
+            <h2>¿Cómo llegar?</h2>
+            <p class="lugar-evento">La Arbolada Eventos, San Carlos</p>
+            <a href="https://www.google.com/maps/place/La+Arbolada+Eventos/@-34.7559987,-54.9135273,17z/data=!3m1!4b1!4m6!3m5!1s0x95752302a4e2b779:0xc0d2dc9f3d5fc8ea!8m2!3d-34.7559987!4d-54.9135273!16s%2Fg%2F11fktglt6m?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="boton">Ver indicaciones</a>
+        </div>
+    </section>
+    <section class="seccion-dress-code">
+        <div class="dress-code-contenedor">
+            <img src="Img/DressCode.svg" alt="Ícono de vestimenta" class="icono">
+            <h2>Dress Code</h2>
+            <p class="descripcion-dress-code">Vestimenta formal</p>
+        </div>
+    </section>
+    <section class="seccion-confirmacion">
+      
+        <h1>Confirmación de asistencia</h1>
+        <p class="mensaje-confirmacion">
+            Si recibiste esta invitación, tu presencia es muy importante para mí. 
+            Confirma la asistencia hasta el <strong>01/10</strong>.
+        </p>
+        <a href="https://forms.gle/8PEFs6qbPbBL6fRk9" class="boton">Confirmar la asistencia</a>
+            
+    </section>
+    <section class="seccion-agenda">
+        <div class="agenda-contenedor">
+            <img src="Img/calendar-icon.svg" alt="Ícono de calendario" class="icono-calendario">
+            <h2>Agenda la fecha</h2>
+            
+            <a class="boton"  href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MGJiZWtpYzFiMGwxNTNhYnFvM3RzMGJucmIgdGFzYWw0OUBt&amp;tmsrc=tasal49%40gmail.com">Agendar el evento</a>
+                
+        </div>
+    </section>
+    <section class="seccion-regalos">
+        <div class="regalos-contenedor">
+            <img src="./Img/regalo.svg" alt="Ícono de regalo" class="icono-regalo">
+            <h2>Regalos</h2>
+            <p class="texto-regalos">
+               No hay mejor regalo que tu compañia, pero si deseas dejarme algo...
+            </p>
+            <button class="boton" onclick="abrirModal()">Ver datos bancarios</button>
+        </div>
+    </section>
+    <section class="seccion-agradecimiento">
+        <div class="agradecimiento-contenedor">
+            <p class="mensaje-agradecimiento">
+                Tu presencia en este día tan importante significa mucho para mi. Estoy muy agradecida de que puedas compartir este momento tan especial.
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Invitaciones Digitales Te Invitaron Uy - Todos los derechos reservados</p>
+    </footer>
+    
+    <!-- Cuadro modal -->
+    <div id="modalRegalos" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2 id="titulo">Datos Bancarios</h2>
+            <p><strong>Banco:</strong> BROU</p>
+            <p><strong>Número de cuenta:</strong> CA 001261917-00003</p>
+            <p><strong>Alias:</strong>15MARTINA</p>
+        </div>
+    </div>
+    
+    
+    
+</body>
+<script src="script.js"></script>
+</html>

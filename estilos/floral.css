@@ -1,0 +1,515 @@
+/* Ajustes básicos para el layout responsivo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* Estilos de la portada */
+.portada {
+    background-image: url('../Img/fondofloral.jpeg'); /* Aquí va la textura que mencionas */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center;
+    height: 100vh; /* La portada ocupará toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Evita el scroll */
+    opacity: 0; /* Comienza invisible */
+    animation: fadeIn 2s forwards; /* 2 segundos para completar el fade-in */
+}
+
+/* Estilos del logotipo */
+.logo {
+    max-width:30%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Vectores florales inferiores */
+.floral {
+    position: absolute;
+    z-index: 0; /* Para que queden detrás del logotipo */
+}
+
+.floral-top-left {
+    top: 0;
+    left: 0;
+    max-width: 20%; /* Ajusta este valor para el tamaño del vector */
+}
+
+.floral-top-right {
+    top: 0;
+    right: 0;
+    max-width: 20%; /* Ajusta este valor para el tamaño del vector */
+}
+.floral-bottom-left {
+    bottom: 0;
+    left: 0;
+    max-width: 15%; /* Ajusta este valor para el tamaño del vector */
+    position: absolute;
+    z-index: 0;
+}
+
+.floral-bottom-right {
+    bottom: 0;
+    right: 0;
+    max-width: 20%; /* Ajusta este valor para el tamaño del vector */
+    position: absolute;
+    z-index: 0;
+}
+/* Flecha intermitente */
+.arrow-down {
+    position: absolute;
+    opacity: 80%;
+    bottom: 20px; /* Ajusta la posición según lo necesites */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Ajusta el tamaño de la flecha */
+    height: 40px;
+    animation: bounce 1.5s infinite;
+    z-index: 1;
+}
+
+
+/* Sección de fecha y cuenta regresiva */
+.seccion-fecha {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #7f8c66;
+    color: #ffffff;
+}
+
+.fecha-contenedor {
+    display: inline-block;
+    padding: 20px;
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.fecha-evento {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.fecha-evento-2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.contador {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contador-item span {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #363f22;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+}
+
+.contador-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+/* Sección de ubicación */
+.seccion-ubicacion {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e3e6d9;
+}
+
+.ubicacion-contenedor {
+    display: inline-block;
+    padding: 20px;
+}
+
+.icono-ubicacion {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.seccion-ubicacion h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #363f22;
+}
+
+.lugar-evento {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+/* Sección de dress code */
+.seccion-dress-code {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #7f8c66;
+    color: #f0f0f0;
+}
+
+.dress-code-contenedor {
+    display: inline-block;
+    padding: 20px;
+
+}
+
+
+.seccion-dress-code h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.descripcion-dress-code {
+    font-size: 1.2rem;
+}
+/* Sección de confirmación de asistencia */
+.seccion-confirmacion {
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url('../Img/fondofloral.jpeg'); /* Aquí va la textura que mencionas */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    color: #333;
+}
+
+.seccion-confirmacion h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.mensaje-confirmacion {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.boton{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #363f22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.boton:hover {
+    background-color: #576141;
+}
+
+/* Sección de agenda */
+.seccion-agenda {
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url('../Img/fondofloral.jpeg'); /* Aquí va la textura que mencionas */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center;
+    color: #333;
+}
+
+.agenda-contenedor {
+    display: inline-block;
+    padding: 20px;
+}
+
+.icono-calendario {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.seccion-agenda h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Sección de regalos */
+.seccion-regalos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color:  #e3e6d9;
+    color: #333;
+}
+
+.regalos-contenedor {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icono-regalo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.seccion-regalos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.texto-regalos {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilos para la ventana modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(170, 184, 138, 0.61);
+    text-decoration: #ddd;
+    
+}
+
+.modal-contenido {
+    background-color: #576141;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+}
+.modal-contenido  p {
+
+    color: #e3e6d9;
+}
+
+#titulo {
+    color: #e3e6d9;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Sección de agradecimiento */
+.seccion-agradecimiento {
+    text-align: center;
+    padding: 40px 20px;
+    background-color:#363f22;
+    color:#ddd;
+}
+
+.agradecimiento-contenedor {
+    display: inline-block;
+    padding: 20px;
+}
+
+.seccion-agradecimiento h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.mensaje-agradecimiento {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .seccion-agradecimiento h2 {
+        font-size: 1.5rem;
+    }
+
+    .mensaje-agradecimiento {
+        font-size: 1rem;
+    }
+    .seccion-regalos h2 {
+        font-size: 1.2rem;
+    }
+
+    .texto-regalos {
+        font-size: 1rem;
+    }
+
+    .boton-regalos {
+        font-size: 0.9rem;
+    }
+
+    .modal-contenido {
+        width: 90%;
+    }
+ 
+    .seccion-confirmacion h1 {
+        font-size: 1.5rem;
+    }
+
+    .mensaje-confirmacion {
+        font-size: 1rem;
+    }
+
+    .boton-confirmacion {
+        font-size: 0.9rem;
+    }
+    .seccion-dress-code h2 {
+        font-size: 1.2rem;
+    }
+
+    .descripcion-dress-code {
+        font-size: 1rem;
+    }
+    .seccion-ubicacion h2 {
+        font-size: 1.2rem;
+    }
+
+    .lugar-evento {
+        font-size: 1rem;
+    }
+
+    .boton-maps {
+        font-size: 0.9rem;
+    }
+    .fecha-evento {
+        font-size: 30px;
+    }
+
+    .contador {
+        flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contador-item {
+        width: 20%; /* Ajusta el ancho para asegurar que días, horas y minutos queden en línea */
+    }
+
+    .contador-item:nth-child(4) { /* El cuarto (segundos) ocupa el 100% de ancho */
+        width: 20%;
+    }
+
+    .contador-item span {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .seccion-agenda h2 {
+        font-size: 1.2rem;
+    }
+
+    .boton-agenda-desplegable {
+        font-size: 0.9rem;
+    }
+
+    .dropdown-contenido a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* Animación de rebote */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(5px) translateX(-50%);
+    }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 60%;
+    }
+
+    .floral-top-left,
+    .floral-top-right {
+        max-width: 60%; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .floral-bottom-left{
+      
+       max-width: 60%; /* Ajuste para pantallas más pequeñas */
+       
+    }
+    .floral-bottom-right {
+        max-width: 60%; /* Ajuste para pantallas más pequeñas */
+        margin-right:-15%;
+    }
+
+  .arrow-down {
+
+    margin-bottom: 50%;
+
+  }
+}
