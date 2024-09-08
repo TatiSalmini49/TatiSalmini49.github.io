@@ -1,5 +1,5 @@
 // Fecha del evento
-const eventDate = new Date("Oct 12, 2024 00:00:00").getTime();
+const eventDate = new Date("Oct 12, 2024 21:30:00").getTime();
 
 const countdownFunction = setInterval(function() {
     const now = new Date().getTime();
